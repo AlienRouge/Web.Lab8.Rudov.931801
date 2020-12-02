@@ -1,11 +1,20 @@
 let container = document.querySelector(".container").cloneNode(true);
 
-AddLine = () => {
-  document.querySelector(".list").append(container.cloneNode(true));
+AddLine = (count) => {
+  for (let i = 0; i < count; i++) {
+    document.querySelector(".list").append(container.cloneNode(true));
+  }
 };
 
 RemoveLine = (pointer) => {
   pointer.parentElement.remove();
+};
+
+RemoveAll = () => {
+  childs = document.querySelector(".list");
+  while (childs.firstChild) {
+    childs.removeChild(childs.firstChild);
+  }
 };
 
 MoveUp = (pointer) => {

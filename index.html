@@ -17,7 +17,12 @@
         </div>
       </div>
       <div class="controls">
-        <button onclick="AddLine()">Добавить элемент</button><br />
+        <div class="add">
+          <button onclick="AddLine(1)">Добавить элемент</button>
+          <button onclick="AddLine(5)">+5</button>
+          <button onclick="AddLine(10)">+10</button>
+          <button onclick="RemoveAll()">Отчистить все</button><br />
+        </div>
         <button onclick="GetJSON()">Сохранить</button>
         <div class="output"></div>
       </div>
