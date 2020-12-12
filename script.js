@@ -30,7 +30,6 @@ MoveDown = (pointer) => {
 GetJSON = () => {
   Mass = document.getElementsByClassName("container");
   JSON_string = "";
-
   for (let item of Mass) {
     fields = item.getElementsByTagName("input");
     JSON_string += `"${fields[0].value}":"${fields[1].value}",`;
