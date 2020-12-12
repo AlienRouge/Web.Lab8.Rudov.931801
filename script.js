@@ -29,11 +29,11 @@ MoveDown = (pointer) => {
 
 GetJSON = () => {
   Mass = document.getElementsByClassName("container");
-  JSON_string = {};
+  JSON_string = "";
+
   for (let item of Mass) {
     fields = item.getElementsByTagName("input");
-    JSON_string[fields[0].value] = fields[1].value;
+    JSON_string += `"${fields[0].value}":"${fields[1].value}",`;
   }
-  delete JSON_string[""];
-  document.querySelector(".output").innerHTML = JSON.stringify(JSON_string);
+  document.querySelector(".output").innerHTML = `{${JSON_string.slice(0, -1)}}`;
 };
